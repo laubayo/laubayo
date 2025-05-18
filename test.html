@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test de Baile</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header>
+    <h1>¿Qué estilo de baile eres?</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Responde estas preguntas</h2>
+      <form id="quizForm">
+        <div class="question">
+          <p><strong>1. ¿Prefieres música clásica, moderna o electrónica?</strong></p>
+          <label><input type="radio" name="q1" value="a"> Clásica</label>
+          <label><input type="radio" name="q1" value="b"> Moderna</label>
+          <label><input type="radio" name="q1" value="c"> Electrónica</label>
+        </div>
+
+        <div class="question">
+          <p><strong>2. ¿Te gusta seguir coreografías o improvisar?</strong></p>
+          <label><input type="radio" name="q2" value="a"> Seguir</label>
+          <label><input type="radio" name="q2" value="b"> Improvisar</label>
+        </div>
+
+        <div class="question">
+          <p><strong>3. ¿Prefieres movimientos suaves o explosivos?</strong></p>
+          <label><input type="radio" name="q3" value="a"> Suaves</label>
+          <label><input type="radio" name="q3" value="b"> Explosivos</label>
+        </div>
+
+        <div class="question">
+          <p><strong>4. ¿Bailes mejor sola/o o en grupo?</strong></p>
+          <label><input type="radio" name="q4" value="a"> Solo/a</label>
+          <label><input type="radio" name="q4" value="b"> En grupo</label>
+        </div>
+
+        <div class="question">
+          <p><strong>5. ¿Prefieres un entorno formal o informal?</strong></p>
+          <label><input type="radio" name="q5" value="a"> Formal</label>
+          <label><input type="radio" name="q5" value="b"> Informal</label>
+        </div>
+
+        <div class="question">
+          <p><strong>6. ¿Disfrutas más de ensayos largos o cortos?</strong></p>
+          <label><input type="radio" name="q6" value="a"> Largos</label>
+          <label><input type="radio" name="q6" value="b"> Cortos</label>
+        </div>
+
+        <div class="question">
+          <p><strong>7. ¿Prefieres usar zapatos cómodos o tacones?</strong></p>
+          <label><input type="radio" name="q7" value="a"> Cómodos</label>
+          <label><input type="radio" name="q7" value="b"> Tacones</label>
+        </div>
+
+        <div class="question">
+          <p><strong>8. ¿Te identificas más con el arte clásico o contemporáneo?</strong></p>
+          <label><input type="radio" name="q8" value="a"> Clásico</label>
+          <label><input type="radio" name="q8" value="b"> Contemporáneo</label>
+        </div>
+
+        <div class="question">
+          <p><strong>9. ¿Prefieres bailar en teatro, calle o discoteca?</strong></p>
+          <label><input type="radio" name="q9" value="a"> Teatro</label>
+          <label><input type="radio" name="q9" value="b"> Calle</label>
+          <label><input type="radio" name="q9" value="c"> Discoteca</label>
+        </div>
+
+        <div class="question">
+          <p><strong>10. ¿Prefieres una competición o una obra artística?</strong></p>
+          <label><input type="radio" name="q10" value="a"> Competición</label>
+          <label><input type="radio" name="q10" value="b"> Obra artística</label>
+        </div>
+
+        <button type="button" onclick="calificar()">Ver resultado</button>
+      </form>
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Laura Bayo Monge 
+  </footer>
+
+  <script>
+    function calificar() {
+      const respuestas = [];
+      for (let i = 1; i <= 10; i++) {
+        const radio = document.querySelector(`input[name=q${i}]:checked`);
+        if (radio) {
+          respuestas.push(radio.value);
+        } else {
+          alert("Por favor responde todas las preguntas.");
+          return;
+        }
+      }
+
+      let conteo = { a: 0, b: 0, c: 0 };
+      respuestas.forEach(respuesta => {
+        conteo[respuesta] = (conteo[respuesta] || 0) + 1;
+      });
+
+      let estilo = "";
+      if (conteo["a"] >= 4) estilo = "Ballet";
+      else if (conteo["b"] >= 4) estilo = "Contemporáneo";
+      else estilo = "K-Pop / Jazz";
+
+      document.getElementById("resultado").innerHTML = `
+        <h3>¡Tu estilo es: <strong>${estilo}</strong>!</h3>
+        <p>Este estilo encajaría contigo según tus respuestas.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

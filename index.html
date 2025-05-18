@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laura Bayo_ Bailarina </title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header>
+     <img src="img/laura.png" alt="Laura - Bailarina " class="logo-header">
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre Mí</a>
+    <a href="#estilos">Estilos</a>
+    <a href="#premios">Premios</a>
+	<a href="#video">Video</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="test.html">Test</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <img src="img/lau1.jpg" alt="Mi foto" class="foto-perfil">
+      <p>
+        Soy bailarina desde los tres años, y desde entonces la danza se ha convertido en una parte esencial de mi vida. A lo largo de los años he explorado y practicado diversos estilos, desde el ballet clásico hasta el hiphop, pasando por contemporáneo, jazz y otros géneros. Esta versatilidad me ha permitido crecer como artista y presentarme en numerosas competiciones, en las que he tenido la suerte de ganar premios tanto a nivel nacional como internacional. Aunque sé que el mundo de las artes escénicas es muy exigente y que vivir de ello no es fácil, mi sueño es dedicarme profesionalmente a esta pasión. Bailar es mi forma de expresarme, y lucharé por seguir en este camino, por difícil que sea.
+      </p>
+    </section>
+
+
+    <section id="estilos">
+      <h2>Estilos de Baile</h2>
+      <div class="estilo-grid">
+        <div class="estilo">
+          <h3>Ballet</h3>
+          <img src="img/ballet.jpg" alt="Ballet">
+        </div>
+        <div class="estilo">
+          <h3>Contemporáneo</h3>
+          <img src="img/contemporaneo.jpg" alt="Contemporáneo">
+        </div>
+        <div class="estilo">
+          <h3>Jazz</h3>
+          <img src="img/jazz.jpg" alt="Jazz">
+        </div>
+        <div class="estilo">
+          <h3>K-Pop</h3>
+          <img src="img/kpop.jpg" alt="K-Pop">
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="premios">
+  <h2>Premios y Reconocimientos</h2>
+  <div class="premio-lista">
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Ciudad de Santander</strong><br>
+        <small>Clásico infantil - 2017</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Ciudad de Santander</strong><br>
+        <small>Clásico infantil - 2018</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Europeo de Paris</strong><br>
+        <small>Contemporáneo juvenil - 2022</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Orbe de Burgos</strong><br>
+        <small>Contemporáneo juvenil - 2023</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Bailarina revelación contemporáneo</strong><br>
+        <small>Certamen Nacional - 2023</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Marina Baixa de Alicante</strong><br>
+        <small>Clásico absoluta - 2023</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Clasificada Europeo de Holanda</strong><br>
+        <small>Sólo Jazz - 2024</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Europeo</strong><br>
+        <small>Duo Contemporáneo juvenil - 2024</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Orbe de Burgos</strong><br>
+        <small>Jazz joven - 2025</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Primer premio en Concurso Orbe de Burgos</strong><br>
+        <small>Jazz Senior - 2025</small>
+      </div>
+    </div>
+
+    <div class="premio-item">
+      <div class="premio-texto">
+        <strong>Certificación Ballet Advance</strong><br>
+        <small>Royal Academy of Dance Londres</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+ 
+    <section id="video">
+      <h2>Video</h2>
+      <div class="video-container">
+        <video controls width="100%" poster="img/video-poster.jpg">
+          <source src="videos/anuncio.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </section>
+
+  
+    <section id="ubicacion">
+      <h2>¿Desde dónde nos visitas?</h2>
+      <button onclick="obtenerUbicacion()">Obtener mi ubicación</button>
+      <div id="ubicacion-info"></div>
+    </section>
+
+ 
+ <section id="contacto">
+  <h2>Contacto</h2>
+ <form method="post" action="mailto:lbaymon9@gmail.com" enctype="text/plain">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required />
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe algo..." required></textarea>
+
+  <button type="submit">Enviar por correo</button>
+</form>
+</section>
+  </main>
+
+  <footer>
+    &copy; 2025 Laura Bayo Monge 
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
